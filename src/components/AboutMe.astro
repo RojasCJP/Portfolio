@@ -1,0 +1,88 @@
+---
+import GradPhoto from "../assets/Grad.jpeg";
+import ChillPhoto from "../assets/Chill.jpeg";
+import PetPhoto from "../assets/Pet.jpeg";
+import TennisPhoto from "../assets/Tennis.jpeg";
+---
+
+<section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 sm:text-5xl tracking-tight">About Me</h2>
+        <div class="mt-4 h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image Grid -->
+        <div class="relative">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <img
+                        src={GradPhoto.src}
+                        alt="Graduation"
+                        class="w-full h-48 object-cover object-top rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    />
+                    <img
+                        src={TennisPhoto.src}
+                        alt="Tennis"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    />
+                </div>
+                <div class="space-y-4 pt-8">
+                    <img
+                        src={ChillPhoto.src}
+                        alt="Chill"
+                        class="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    />
+                    <img
+                        src={PetPhoto.src}
+                        alt="Pet"
+                        class="w-full h-48 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="space-y-6">
+            <div class="bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-gray-100">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                    <span class="text-3xl">👋</span> Hello, I'm a Full Stack Engineer
+                </h3>
+
+                <div class="prose prose-lg text-gray-600 space-y-4">
+                    <p>
+                        With <span class="font-semibold text-gray-900">3.5+ years of experience</span> building
+                        end-to-end software solutions, I specialize in backend development and system design.
+                        My tech stack includes <span class="text-blue-600 font-medium">Python</span> (FastAPI, Flask)
+                        and <span class="text-blue-600 font-medium">TypeScript/JavaScript</span> (NestJS, Next.js, React).
+                    </p>
+
+                    <p>
+                        Currently at <span class="font-semibold text-gray-900">TELUS International</span>, I focus on
+                        building AI-integrated solutions that combine robust backend systems with modern web technologies.
+                        I'm passionate about writing clean, efficient code and creating scalable, maintainable applications.
+                    </p>
+
+                    <p>
+                        Beyond coding, you'll find me on the <span class="text-green-600 font-medium">🎾 tennis court</span>,
+                        solving <span class="text-purple-600 font-medium">🎲 speedcubes</span>, or experimenting in the
+                        <span class="text-orange-600 font-medium">🍳 kitchen</span>. I believe cooking has sharpened my
+                        attention to detail — a skill that translates directly to writing quality code.
+                    </p>
+                </div>
+
+                <!-- Skills Tags -->
+                <div class="mt-8">
+                    <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Core Skills</h4>
+                    <div class="flex flex-wrap gap-2">
+                        {['Python', 'FastAPI', 'TypeScript', 'NestJS', 'React', 'Next.js', 'System Design', 'AI Integration'].map((skill) => (
+                            <span class="px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 text-gray-700 rounded-full text-sm font-medium border border-blue-100 hover:border-blue-300 transition-colors">
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
