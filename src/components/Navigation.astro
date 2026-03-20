@@ -12,7 +12,7 @@ const navLinks = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <a href="#" class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <a href="#" class="text-xl font-bold bg-gradient-to-r from-emerald-600 to-sky-600 bg-clip-text text-transparent">
         Portfolio
       </a>
 
@@ -21,7 +21,7 @@ const navLinks = [
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 nav-link"
+            class="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 nav-link"
             data-section={link.href.slice(1)}
           >
             {link.label}
@@ -50,7 +50,7 @@ const navLinks = [
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors mobile-nav-link"
+            class="text-gray-700 hover:text-emerald-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors mobile-nav-link"
             data-section={link.href.slice(1)}
           >
             {link.label}
@@ -100,10 +100,10 @@ const navLinks = [
         const id = entry.target.getAttribute('id');
         navLinks.forEach((link) => {
           if (link.getAttribute('data-section') === id) {
-            link.classList.add('text-blue-600');
+            link.classList.add('text-emerald-600');
             link.classList.remove('text-gray-700');
           } else {
-            link.classList.remove('text-blue-600');
+            link.classList.remove('text-emerald-600');
             link.classList.add('text-gray-700');
           }
         });

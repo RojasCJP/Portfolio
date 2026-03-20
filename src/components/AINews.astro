@@ -42,7 +42,7 @@ const categories = [...new Set(aiNewsItems.map(item => item.category))];
     <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-gray-900 sm:text-5xl tracking-tight mb-4">
-        🤖 <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI News</span> & Insights
+        <span class="text-red-600">🤖</span> <span class="bg-gradient-to-r from-emerald-600 to-sky-600 bg-clip-text text-transparent">AI News</span> & Insights
       </h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
         Staying on top of AI developments is crucial in my work. Here are the trends, tools, and research I'm currently following.
@@ -51,7 +51,7 @@ const categories = [...new Set(aiNewsItems.map(item => item.category))];
 
     <!-- Category Filters -->
     <div class="flex flex-wrap justify-center gap-2 mb-12">
-      <button class="category-filter px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-all" data-category="all">
+      <button class="category-filter px-4 py-2 bg-emerald-600 text-white rounded-full text-sm font-medium transition-all" data-category="all">
         All
       </button>
       {categories.map((category) => (
@@ -66,13 +66,16 @@ const categories = [...new Set(aiNewsItems.map(item => item.category))];
       {aiNewsItems.map((item) => (
         <article class="news-card group bg-gray-50 rounded-2xl p-6 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100" data-category={item.category}>
           <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-xs font-semibold">
+            <span class="px-3 py-1 bg-gradient-to-r from-emerald-100 to-sky-100 text-emerald-700 rounded-full text-xs font-semibold border-l-2 border-red-500">
               {item.category}
             </span>
-            <span class="text-sm text-gray-400">{item.date}</span>
+            <span class="text-sm text-gray-400 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+              {item.date}
+            </span>
           </div>
 
-          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
             {item.title}
           </h3>
 
@@ -82,7 +85,7 @@ const categories = [...new Set(aiNewsItems.map(item => item.category))];
 
           <div class="flex items-center justify-between">
             <span class="text-sm text-gray-500 font-medium">{item.source}</span>
-            <a href={item.link} class="inline-flex items-center text-blue-600 font-semibold hover:text-purple-600 transition-colors">
+            <a href={item.link} class="inline-flex items-center text-emerald-600 font-semibold hover:text-sky-600 transition-colors">
               Learn more
               <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -111,11 +114,11 @@ const categories = [...new Set(aiNewsItems.map(item => item.category))];
 
       // Update active button
       filterButtons.forEach((btn) => {
-        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.remove('bg-emerald-600', 'text-white');
         btn.classList.add('bg-gray-100', 'text-gray-700');
       });
       button.classList.remove('bg-gray-100', 'text-gray-700');
-      button.classList.add('bg-blue-600', 'text-white');
+      button.classList.add('bg-emerald-600', 'text-white');
 
       // Filter cards
       newsCards.forEach((card) => {
