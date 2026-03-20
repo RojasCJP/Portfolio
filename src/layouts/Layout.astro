@@ -1,3 +1,13 @@
+---
+import Navigation from '../components/Navigation.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Juan Pablo Rojas | Full Stack Engineer" } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,9 +16,11 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content="Full Stack Engineer with 3.5+ years of experience building end-to-end software solutions. Specializing in backend development, system design, and AI integration." />
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="pt-16">
+		<Navigation />
 		<slot />
 	</body>
 </html>

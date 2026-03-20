@@ -1,0 +1,33 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-400 py-8 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <!-- Copyright -->
+      <p class="text-sm">
+        © {currentYear} Juan Pablo Rojas. All rights reserved.
+      </p>
+
+      <!-- Quick Links -->
+      <div class="flex gap-6">
+        <a href="#about" class="text-sm hover:text-white transition-colors">About</a>
+        <a href="#projects" class="text-sm hover:text-white transition-colors">Projects</a>
+        <a href="#contact" class="text-sm hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Built With -->
+      <p class="text-sm flex items-center gap-2">
+        Built with
+        <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 transition-colors font-medium">
+          Astro
+        </a>
+        +
+        <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+          Tailwind CSS
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

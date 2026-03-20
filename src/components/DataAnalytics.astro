@@ -1,0 +1,171 @@
+---
+const dataProjects = [
+  {
+    title: "Customer Sentiment Analysis",
+    description: "Built a Python-based pipeline to analyze customer feedback using NLP techniques. Processed 100K+ records to extract insights for product improvements.",
+    tools: ["Python", "Pandas", "NLTK", "scikit-learn", "FastAPI"],
+    metrics: [
+      { label: "Records Processed", value: "100K+" },
+      { label: "Accuracy", value: "89%" }
+    ],
+    color: "blue"
+  },
+  {
+    title: "Real-time Analytics Dashboard",
+    description: "Developed a dashboard for monitoring system metrics and business KPIs. Integrated with multiple data sources for centralized reporting.",
+    tools: ["TypeScript", "React", "D3.js", "PostgreSQL", "Redis"],
+    metrics: [
+      { label: "Update Latency", value: "<1s" },
+      { label: "Data Sources", value: "5+" }
+    ],
+    color: "purple"
+  },
+  {
+    title: "ETL Pipeline Automation",
+    description: "Designed and implemented automated ETL workflows for data warehousing. Reduced manual processing time by 80% through scheduling and optimization.",
+    tools: ["Python", "Apache Airflow", "AWS Glue", "Snowflake"],
+    metrics: [
+      { label: "Time Saved", value: "80%" },
+      { label: "Daily Jobs", value: "50+" }
+    ],
+    color: "green"
+  }
+];
+
+const skills = [
+  { name: "Data Processing", level: 90, category: "Core" },
+  { name: "SQL & Databases", level: 95, category: "Core" },
+  { name: "Python (Pandas, NumPy)", level: 90, category: "Core" },
+  { name: "Data Visualization", level: 85, category: "Core" },
+  { name: "Machine Learning", level: 75, category: "Advanced" },
+  { name: "Statistical Analysis", level: 80, category: "Advanced" },
+  { name: "ETL Pipelines", level: 85, category: "Tools" },
+  { name: "Big Data (Spark)", level: 70, category: "Tools" }
+];
+---
+
+<section id="data-analytics" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 sm:text-5xl tracking-tight mb-4">
+        📊 <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Data Analytics</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Transforming raw data into actionable insights. I specialize in building pipelines, creating visualizations, and deriving meaningful patterns.
+      </p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="mb-16">
+      <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Tools & Skills</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {skills.map((skill) => (
+          <div class="bg-white p-4 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-medium text-gray-900">{skill.name}</span>
+              <span class="text-sm text-gray-500">{skill.level}%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div
+                class="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out skill-bar"
+                style={`width: 0%`}
+                data-width={`${skill.level}%`}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Projects</h3>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {dataProjects.map((project, index) => (
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+          <!-- Icon -->
+          <div class={`w-12 h-12 rounded-xl bg-${project.color}-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+            <svg class={`w-6 h-6 text-${project.color}-600`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+
+          <!-- Title -->
+          <h4 class="text-xl font-bold text-gray-900 mb-3">{project.title}</h4>
+
+          <!-- Description -->
+          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+            {project.description}
+          </p>
+
+          <!-- Metrics -->
+          <div class="flex gap-4 mb-4">
+            {project.metrics.map((metric) => (
+              <div class="bg-gray-50 rounded-lg px-3 py-2">
+                <div class="text-2xl font-bold text-blue-600">{metric.value}</div>
+                <div class="text-xs text-gray-500">{metric.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Tools -->
+          <div class="flex flex-wrap gap-2">
+            {project.tools.map((tool) => (
+              <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium">
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Data Visualization Showcase -->
+    <div class="mt-16 bg-white rounded-2xl p-8 border border-gray-100">
+      <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Tech Stack Distribution</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        {[
+          { name: "Python", percent: 40, color: "bg-yellow-500" },
+          { name: "SQL", percent: 25, color: "bg-blue-500" },
+          { name: "TypeScript", percent: 20, color: "bg-blue-400" },
+          { name: "Other", percent: 15, color: "bg-gray-400" }
+        ].map((item) => (
+          <div class="flex items-center gap-2">
+            <div class={`w-4 h-4 rounded ${item.color}`}></div>
+            <span class="text-sm text-gray-600">{item.name} ({item.percent}%)</span>
+          </div>
+        ))}
+      </div>
+      <div class="mt-4 h-8 bg-gray-100 rounded-full overflow-hidden flex">
+        <div class="w-[40%] bg-yellow-500"></div>
+        <div class="w-[25%] bg-blue-500"></div>
+        <div class="w-[20%] bg-blue-400"></div>
+        <div class="w-[15%] bg-gray-400"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animate skill bars on scroll
+  const skillBars = document.querySelectorAll('.skill-bar');
+
+  const animateSkills = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const bar = entry.target as HTMLElement;
+        const width = bar.getAttribute('data-width');
+        if (width) {
+          bar.style.width = width;
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(animateSkills, {
+    threshold: 0.5,
+    rootMargin: '0px'
+  });
+
+  skillBars.forEach((bar) => observer.observe(bar));
+</script>
