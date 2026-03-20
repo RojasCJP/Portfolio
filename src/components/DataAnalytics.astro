@@ -49,7 +49,7 @@ const skills = [
     <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-gray-900 sm:text-5xl tracking-tight mb-4">
-        📊 <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Data Analytics</span>
+        <span class="text-red-600">📊</span> <span class="bg-gradient-to-r from-emerald-600 to-sky-600 bg-clip-text text-transparent">Data Analytics</span>
       </h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
         Transforming raw data into actionable insights. I specialize in building pipelines, creating visualizations, and deriving meaningful patterns.
@@ -58,7 +58,11 @@ const skills = [
 
     <!-- Skills Section -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Tools & Skills</h3>
+      <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-2">
+        <span class="w-8 h-0.5 bg-red-500"></span>
+        Tools & Skills
+        <span class="w-8 h-0.5 bg-red-500"></span>
+      </h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {skills.map((skill) => (
           <div class="bg-white p-4 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
@@ -68,7 +72,7 @@ const skills = [
             </div>
             <div class="w-full bg-gray-200 rounded-full h-2">
               <div
-                class="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out skill-bar"
+                class="bg-gradient-to-r from-emerald-500 to-sky-500 h-2 rounded-full transition-all duration-1000 ease-out skill-bar"
                 style={`width: 0%`}
                 data-width={`${skill.level}%`}
               ></div>
@@ -102,7 +106,7 @@ const skills = [
           <div class="flex gap-4 mb-4">
             {project.metrics.map((metric) => (
               <div class="bg-gray-50 rounded-lg px-3 py-2">
-                <div class="text-2xl font-bold text-blue-600">{metric.value}</div>
+                <div class="text-2xl font-bold text-emerald-600">{metric.value}</div>
                 <div class="text-xs text-gray-500">{metric.label}</div>
               </div>
             ))}
@@ -126,8 +130,8 @@ const skills = [
       <div class="flex flex-wrap justify-center gap-4">
         {[
           { name: "Python", percent: 40, color: "bg-yellow-500" },
-          { name: "SQL", percent: 25, color: "bg-blue-500" },
-          { name: "TypeScript", percent: 20, color: "bg-blue-400" },
+          { name: "SQL", percent: 25, color: "bg-sky-500" },
+          { name: "TypeScript", percent: 20, color: "bg-emerald-400" },
           { name: "Other", percent: 15, color: "bg-gray-400" }
         ].map((item) => (
           <div class="flex items-center gap-2">
@@ -138,8 +142,8 @@ const skills = [
       </div>
       <div class="mt-4 h-8 bg-gray-100 rounded-full overflow-hidden flex">
         <div class="w-[40%] bg-yellow-500"></div>
-        <div class="w-[25%] bg-blue-500"></div>
-        <div class="w-[20%] bg-blue-400"></div>
+        <div class="w-[25%] bg-sky-500"></div>
+        <div class="w-[20%] bg-emerald-400"></div>
         <div class="w-[15%] bg-gray-400"></div>
       </div>
     </div>
